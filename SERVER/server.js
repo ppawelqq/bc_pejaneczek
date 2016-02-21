@@ -16,7 +16,9 @@ var app = require("express")(),
     io = require("socket.io")(http);
 
 app.get("/chatRoomAll", function (req, res) {
-    res.sendFile("/media/pawel/paweł/MAGISTERKA/BC/BrowserChat/SERVER/index.html");
+    //res.sendFile("/media/pawel/paweł/MAGISTERKA/BC/BrowserChat/SERVER/index.html");
+
+    res.send("Hello World");
 });
 
 io.on("connection", function (socket) {
