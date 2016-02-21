@@ -1,14 +1,9 @@
+var server_port = process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+
 // Global lib
 var express = require("express"),
-    app = express(),
-    bodyParser = require("body-parser"),
-    router = express.Router(),
-    fs = require("fs");
-
-// Database
-var mongo = require("mongodb"),
-    monk = require("monk"),
-    db = monk("localhost:27017/pejaneczek");
+    app = express();
 
 //socket.io
 var app = require("express")(),
@@ -27,7 +22,6 @@ io.on("connection", function (socket) {
     });
 });
 
-http.listen(8081, function () {
-
-    console.log("Server listening at 8081");
+server.listen(server_port, server_ip_address, function () {
+    console.log("Listening on " + server_ip_address + ", server_port " + server_port)
 });
