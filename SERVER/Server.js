@@ -29,35 +29,3 @@ http.listen(8081, function () {
 
     console.log("Server listening at 8081");
 });
-//
-//// Body Parser
-//app.use(bodyParser.json());
-//app.use(bodyParser.urlencoded({
-//    "extended": false
-//}));
-//
-//router.get("/chatRoomAll", function (request, response) {
-//    response.sendFile("/media/pawel/paweł/MAGISTERKA/BC/BrowserChat/SERVER/index.html");
-//});
-//
-//// Route
-//// lista uzytkowników
-//router.get("/userlist", function (req, res) {
-//    var collection = db.get("pejaneczek");
-//
-//    collection.find({}, {}, function (e, docs) {
-//        res.json(docs);
-//    });
-//});
-//
-//app.use("/", router);
-//
-//// Server
-//var server = app.listen(8081, function () {
-//
-//    var host = server.address().address;
-//    var port = server.address().port;
-//
-//    console.log("Listening at http://%s:%s", host, port);
-//
-//});
